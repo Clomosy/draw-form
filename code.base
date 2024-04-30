@@ -6,5 +6,8 @@ begin
     MyDrawForm.clSetStyle(MyDrawForm.DarkSB); 
     MyDrawForm.DrawApp(True);  
 
-    MyDrawForm.Run;
+  if Clomosy.PlatformIsMobile then
+	MyDrawForm.Run;
+	else
+	MyDrawForm.RunModal;
 end;
